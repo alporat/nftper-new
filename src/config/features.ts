@@ -1,4 +1,4 @@
-import { Bot, Gauge, Coins, Cpu, ListChecks, Globe, BarChart3, Clock, Zap, Target, Shield,HandCoins,Link,Smartphone } from 'lucide-react';
+import { Bot, Gauge, Coins, Cpu, ListChecks, Globe, BarChart3, Clock, Zap, Target, Shield,HandCoins,Link,Smartphone,CircleX, TicketSlash } from 'lucide-react';
 import { FeatureConfig } from '@/types/features';
 
 export const biddingBotFeatures: FeatureConfig[] = [
@@ -27,45 +27,45 @@ export const biddingBotFeatures: FeatureConfig[] = [
 export const listingBotFeatures: FeatureConfig[] = [
   {
     icon: ListChecks,
-    title: 'Multi-marketplace Listing',
-    description: 'List your NFTs across multiple platforms simultaneously',
+    title: 'Instant outlisting',
+    description: 'Instantly list lower than people that list under you',
   },
   {
     icon: Globe,
-    title: 'Global Reach',
-    description: 'Access worldwide marketplaces and buyers',
+    title: 'Predicted listing',
+    description: "If you are bidding on a collection and expect to get an NFT from there, you can set up a predicted auto listing which will automatically list it with the given min/max at the given trait's floor price",
   },
   {
     icon: BarChart3,
-    title: 'Dynamic Pricing',
-    description: 'Automatic price adjustments based on market demand',
+    title: 'Outlist all the time',
+    description: 'Even if someone outlists you (lists lower than you) still outlist other NFTs that are in the given min/max range',
   },
   {
     icon: Clock,
-    title: 'Scheduled Listings',
-    description: 'Plan your listings in advance with timing optimization',
+    title: 'Cloud based',
+    description: 'No downloads or VPS required, access our web client from any browser with MetaMask (yes, even mobile)',
   },
 ];
 
 export const extremeBiddingFeatures: FeatureConfig[] = [
   {
     icon: Zap,
-    title: 'Lightning Speed',
-    description: 'Ultra-fast execution for competitive markets',
+    title: 'Insanely fast offers',
+    description: 'Send up to 45 token offers per second (150k+ per hour, contact us for more)',
   },
   {
     icon: Target,
-    title: 'Precision Sniping',
-    description: 'Advanced tools for precise market timing',
+    title: 'Instant counter bidding',
+    description: 'Instantly outbid if someone sends a higher offer',
   },
   {
-    icon: Shield,
-    title: 'Risk Management',
-    description: 'Sophisticated protection against market volatility',
+    icon: CircleX,
+    title: 'Auto cancelling',
+    description: 'After each outbid, cancel the previous offer sent',
   },
   {
-    icon: Cpu,
-    title: 'Custom Algorithms',
-    description: 'Personalized trading strategies for your needs',
+    icon: TicketSlash,
+    title: 'Includes Bidding for free',
+    description: 'If you get extreme, you also get our Bidding bot for free (we can make the underlined parts clickable link-like to open the bidding section)',
   },
 ];
