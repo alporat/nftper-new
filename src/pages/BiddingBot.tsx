@@ -1,7 +1,7 @@
 import React from 'react';
 import { Bot, Gauge, Coins, Cpu } from 'lucide-react';
 import { PageContainer } from '../components/shared/PageContainer';
-import { FeatureGrid } from '../components/shared/FeatureGrid';
+import { FeatureGrid } from '@/components/shared/feature-grid';
 
 export function BiddingBot() {
   const features = [

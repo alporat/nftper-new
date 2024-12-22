@@ -1,7 +1,7 @@
 import React from 'react';
 import { ListChecks, Globe, BarChart3, Clock } from 'lucide-react';
 import { PageContainer } from '../components/shared/PageContainer';
-import { FeatureGrid } from '../components/shared/FeatureGrid';
+import { FeatureGrid } from '@/components/shared/feature-grid';
 
 export function ListingBot() {
   const features = [
