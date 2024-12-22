@@ -3,7 +3,7 @@ import { Bot, Gauge, Coins, Cpu } from 'lucide-react';
 import { PageContainer } from '../components/shared/PageContainer';
 import { FeatureGrid } from '@/components/shared/feature-grid';
 
-export function BiddingBot() {
+ export default function BiddingBot() {
   const features = [
     {
       icon: Bot,

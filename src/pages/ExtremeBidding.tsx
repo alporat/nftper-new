@@ -3,7 +3,7 @@ import { Zap, Target, Shield, Cpu } from 'lucide-react';
 import { PageContainer } from '../components/shared/PageContainer';
 import { FeatureGrid } from '@/components/shared/feature-grid';
 
-export function ExtremeBidding() {
+export default function ExtremeBidding() {
   const features = [
     {
       icon: Zap,

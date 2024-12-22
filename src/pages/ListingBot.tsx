@@ -3,7 +3,7 @@ import { ListChecks, Globe, BarChart3, Clock } from 'lucide-react';
 import { PageContainer } from '../components/shared/PageContainer';
 import { FeatureGrid } from '@/components/shared/feature-grid';
 
-export function ListingBot() {
+export default function ListingBot() {
   const features = [
     {
       icon: ListChecks,
