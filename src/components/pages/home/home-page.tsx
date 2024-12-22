@@ -40,7 +40,7 @@ export function HomePage() {
   }, [pathname]); 
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center justify-center min-h-screen">
       <h1 className="text-4xl font-bold mb-8">Choose Your Trading Bot</h1>
       <div className="grid md:grid-cols-3 gap-8 w-full max-w-5xl">
         {features.map((feature) => (

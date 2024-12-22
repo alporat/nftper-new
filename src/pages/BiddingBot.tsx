@@ -2,6 +2,7 @@ import React from 'react';
 import { Bot, Gauge, Coins, Cpu } from 'lucide-react';
 import { PageContainer } from '../components/shared/PageContainer';
 import { FeatureGrid } from '@/components/shared/feature-grid';
+import { FAQ } from '@/components/ui/faq';
 
  export default function BiddingBot() {
   const features = [
@@ -26,6 +27,8 @@ import { FeatureGrid } from '@/components/shared/feature-grid';
       description: 'Set and forget with intelligent automation features',
     },
   ];
+
+
 
   return (
     <PageContainer

@@ -11,6 +11,7 @@ import Pricing from '@/components/ui/pricing'
 import Image from 'next/image'
 import { ArrowRight, Bot, Sparkles } from 'lucide-react'
 import img from "@/images/nft.png"
+import { FAQ } from '@/components/ui/faq'
 export function BiddingBotPage() {
   const pathname = usePathname()
   const setIshome = useStore((state) => state.setIshome)
@@ -18,6 +19,23 @@ export function BiddingBotPage() {
   useEffect(() => {
     pathname === "/bidding" ? setIshome(true) : setIshome(true)
   }, [pathname])
+  const biddingfaq = [
+    {question:"What does NFTPER offer? ", answer:"We are a new service provider, and we offer autonomous bots that can send offers on NFTs for you. "},
+    {question:"Who is the NFTPER team?", answer: (
+        <>I'm <a href='https://alporat.com/' className='hover:underline hover:text-green-400'>alporat</a>, and I'm currently the sole developer and creator of NFTPER.</>
+    )},
+    {question:"Will there be Founder NFTs in the future ?", answer:"We plan to launch Lifetime Access NFTs on OpenSea in the near future."},
+    {question:"Do you have an affiliate program ?", answer:"Contact us via Discord to join our affiliate program, where you can get a cut from your referrals' first month subscription."},
+    {question:"There is a bug, what should I do ? ", answer: (
+      <>Contact us via  <a href='https://discord.gg/hsa6VKbjzw' className='hover:underline hover:text-green-400'>Discord</a>, to join our affiliate program, where you can get a cut from your referrals' first month subscription..</>
+  )}, 
+
+
+    {question:"I have more questions.",answer: (
+      <>You can join our <a href='https://discord.gg/hsa6VKbjzw' className='hover:underline hover:text-green-400'>Discord</a>, and ask them there, or you can email us directly at <a href='mailto:contact@nftper.com' className='hover:underline hover:text-green-400'>contact@nftper.com</a>.</>
+  )},
+
+  ]
 
   return (
     <PageContainer title={''} description={''}>
@@ -109,6 +127,7 @@ export function BiddingBotPage() {
 
       <FeatureGrid features={biddingBotFeatures} />
       <Pricing />
+      <FAQ title={''} faqs={biddingfaq}/>
     </PageContainer>
   )
 }

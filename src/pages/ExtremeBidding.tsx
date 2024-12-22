@@ -2,6 +2,7 @@ import React from 'react';
 import { Zap, Target, Shield, Cpu } from 'lucide-react';
 import { PageContainer } from '../components/shared/PageContainer';
 import { FeatureGrid } from '@/components/shared/feature-grid';
+import { FAQ } from '@/components/ui/faq';
 
 export default function ExtremeBidding() {
   const features = [
