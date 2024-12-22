@@ -1,10 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import { Bot, ListChecks, Zap } from 'lucide-react';
 
 export default function Home() {
-  const navigate = useNavigate();
+  const router = useRouter();
   
   const buttons = [
     {
@@ -37,7 +37,7 @@ export default function Home() {
         {buttons.map(({ path, icon: Icon, title, description, color }) => (
           <motion.button
             key={path}
-            onClick={() => navigate(path)}
+            onClick={() => router.push(path)}
             className={`p-8 rounded-xl bg-gradient-to-br ${color} backdrop-blur-sm 
               border border-white/10 text-left transition-all duration-300`}
             whileHover={{ scale: 1.02 }}
