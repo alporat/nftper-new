@@ -1,26 +1,29 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import { Navigation } from './components/Navigation/navigation';
-import Home from './pages/Home';
-import BiddingBot from './pages/BiddingBot';
-import ListingBot from './pages/ListingBot';
-import ExtremeBidding from './pages/ExtremeBidding';
+import { useRouter } from 'next/navigation'; // Use next/navigation for App Router
+import Link from 'next/link'; // Import Link for better navigation
 import TabbedNav from './components/Navigation/tabbed-nav';
 
-export function App() {
+export default function App() {
+  const router = useRouter();
+
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-900 text-white">
-        <TabbedNav />
-        <div className="max-w-6xl mx-auto px-4 py-8">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/biddingbot" element={<BiddingBot />} />
-            <Route path="/listingbot" element={<ListingBot />} />
-            <Route path="/extremebidding" element={<ExtremeBidding />} />
-          </Routes>
-        </div>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <TabbedNav />
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        {/* Using Link component is preferred for client-side navigation */}
+        <Link href="/" className="px-4 py-2 mr-2 bg-blue-600 rounded hover:bg-blue-700">
+          Home
+        </Link>
+        <Link href="/biddingbot" className="px-4 py-2 mr-2 bg-blue-600 rounded hover:bg-blue-700">
+          Bidding Bot
+        </Link>
+        <Link href="/listingbot" className="px-4 py-2 mr-2 bg-blue-600 rounded hover:bg-blue-700">
+          Listing Bot
+        </Link>
+        <Link href="/extremebidding" className="px-4 py-2 mr-2 bg-blue-600 rounded hover:bg-blue-700">
+          Extreme Bidding
+        </Link>
       </div>
-    </Router>
+    </div>
   );
 }
