@@ -8,7 +8,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <TabbedNav />
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Using Link component is preferred for client-side navigation */}
         <Link href="/" className="px-4 py-2 mr-2 bg-blue-600 rounded hover:bg-blue-700">

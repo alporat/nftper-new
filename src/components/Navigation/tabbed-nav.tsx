@@ -15,8 +15,12 @@ export default function TabbedNav() {
   const setIshome = useStore((state)=> state.setIshome)
   const pathname = usePathname();  // Gets the current path
 
+  if (pathname === "/") return null;  // Don't render the nav if on home page
+
   return (
-    <div className="flex items-center justify-center px-4 py-2  w-[500px] rounded-lg">
+    <>
+    <div className="flex items-center justify-center px-4 py-2  w-[500px] rounded-lg motion-preset-pop motion-duration-500
+">
       <div className="flex items-center gap-2">
 
         <Link className="text-white hover:bg-zinc-800 p-1 rounded-md transition-colors" href={'/'}>
@@ -78,6 +82,7 @@ export default function TabbedNav() {
         </button>
       </div>
     </div>
+    </>
   )
 }
 

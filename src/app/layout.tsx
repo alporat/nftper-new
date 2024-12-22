@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Nav from "@/components/Navigation/tabbed-nav"
 import '@/styles/globals.css';
-import { TabsDemo } from '@/components/Navigation/animated tabs';
 
 export const metadata: Metadata = {
   title: 'NFTPER - Advanced NFT Trading Tools',
