@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import { Navigation } from './components/Navigation/navigation';
-import { Home } from './pages/Home';
-import { BiddingBot } from './pages/BiddingBot';
-import { ListingBot } from './pages/ListingBot';
-import { ExtremeBidding } from './pages/ExtremeBidding';
+import Home from './pages/Home';
+import BiddingBot from './pages/BiddingBot';
+import ListingBot from './pages/ListingBot';
+import ExtremeBidding from './pages/ExtremeBidding';
 import TabbedNav from './components/Navigation/tabbed-nav';
 
 export function App() {
