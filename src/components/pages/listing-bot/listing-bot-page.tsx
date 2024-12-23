@@ -31,6 +31,38 @@ export function ListingBotPage() {
   )},
 
   ]
+  const listingaddons = [ 
+      {
+        id :"0",
+        name:"Coming Soon",
+        description : "",
+        price : "Coming Soon"
+  
+      
+      },
+  ]
+  const listingplans = [
+    
+    {
+      name: 'Standard Access',
+      price: "Coming Soon",
+      features: [
+      ],
+    },
+    {
+      name: 'Pro Access',
+      popular: true,
+      price: "Coming Soon",
+      features: [
+      ],
+    },
+    {
+      name: 'Ultra Access',
+      price: "Coming Soon",
+      features: [
+      ],
+    },
+  ]
 
   return (
     <PageContainer title={''} description={''}>
@@ -122,7 +154,7 @@ export function ListingBotPage() {
       `}</style>
 
       <FeatureGrid features={listingBotFeatures} />
-      <Pricing />
+      <Pricing plans={listingplans} addons={listingaddons} buttonText={'COMING SOON'} />
       <FAQ title={''} faqs={biddingfaq}/>
     </PageContainer>
   )

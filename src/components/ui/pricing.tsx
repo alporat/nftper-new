@@ -5,74 +5,12 @@ import { Check, X, Sparkles, ChevronDown, ChevronUp } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Switch } from "@/components/ui/switch"
+import { usePathname } from 'next/navigation'
 
-const plans = [
-  {
-    name: 'Standard Access',
-    price: "Ξ0.07",
-    features: [
-      { name: 'Up to 180 offers / minute', included: true },
-      { name: '60 token offers / min', included: true },
-      { name: '120 collection offers / min', included: true },
-      { name: '1 bot count', included: true },
-      { name: 'Add up to 5 wallets to bid from', included: true },
-      { name: 'Instant Counter Offer (coming soon)', included: false },
-      { name: 'Whitelist on future Lifetime NFT', included: true },
-    ],
-  },
-  {
-    name: 'Pro Access',
-    popular: true,
-    price: "Ξ0.10",
-    features: [
-      { name: 'Up to total of 540 offers / minute', included: true },
-      { name: '180 offers / min per wallet', included: true },
-      { name: '60 token offers / min', included: true },
-      { name: '120 collection offers / min', included: true },
-      { name: 'Bid with 3 wallets concurrently', included: true },
-      { name: 'Instant Counter Offer (coming soon)', included: false },
-      { name: 'Whitelist on future Lifetime NFT', included: true },
-    ],
-  },
-  {
-    name: 'Ultra Access',
-    price: "Coming Soon",
-    features: [
-      { name: 'Up to 960 offers / minute', included: true },
-      { name: '60 token offers / min', included: true },
-      { name: '900 collection offers / min', included: true },
-      { name: '1 ultra speed bot count', included: true },
-      { name: 'Add up to 10 wallets to bid from', included: true },
-      { name: 'Instant Counter Offer (coming soon)', included: false },
-      { name: 'Whitelist on future Lifetime NFT', included: true },
-    ],
-  },
-]
-
-const addons: { id: string; name: string; description: string; price: string | number; }[] = [
-  {
-    id: '0',
-    name: 'Remove Prefix',
-    description: '24/7 priority support with dedicated account manager',
-    price: "Ξ0.05",
-  },
-  {
-    id: '1',
-    name: 'Bot Count Increase',
-    description: ' Increases your bot count by one (for Standard and Pro subscription)',
-    price: "Ξ0.02",
-  },
-  {
-    id: '1',
-    name: 'Ultra Bot Count Increase',
-    description: 'Get notified for specific NFT price movements and rare listings',
-    price: "Coming Soon",
-  },
-]
-
-export default function Pricing() {
+export default function Pricing({ plans, addons, buttonText }: PricingProps) {
   const [showAddon, setShowAddon] = useState(false)
   const [selectedAddons, setSelectedAddons] = useState<string[]>([])
+  const pathname = usePathname();  // Gets the current path
 
   const handleAddonToggle = (addonId: string) => {
     setSelectedAddons(current =>
@@ -93,9 +31,8 @@ export default function Pricing() {
             Unlock the power of automated NFT bidding
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {plans.map((plan, index) => (
+          {plans.map((plan: PricingProps['plans'][number], index: number) => (
             <motion.div
               key={plan.name}
               className={`relative group rounded-2xl backdrop-blur-sm ${
@@ -119,10 +56,11 @@ export default function Pricing() {
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-4 text-white">{plan.name}</h3>
                 <div className="mb-6 h-[80px] flex items-end">
-                  <span className={`font-bold bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent ${plan.name === 'Ultra Access' ? 'text-3xl' : 'text-5xl'}`}>
+                  <span className={`font-bold bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent ${plan.name  === 'Ultra Access' || pathname ==="/listing"  ? 'text-3xl' : 'text-5xl'}`}>
                     {plan.price}
                   </span>
                 </div>
+                
                 <Button 
                   className={`w-full ${
                     plan.popular
@@ -130,13 +68,13 @@ export default function Pricing() {
                       : 'bg-gray-700 hover:bg-gray-600 text-white'
                   } transition-all duration-200 group-hover:scale-105`}
                 >
-                  PURCHASE
+                  {buttonText}
                 </Button>
               </div>
 
               <div className="border-t border-gray-700/50">
                 <ul className="p-8 space-y-4">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature: { included: boolean; name: string }, featureIndex: number) => (
                     <li key={featureIndex} className="flex items-center gap-3">
                       {feature.included ? (
                         <div className="rounded-full p-1 bg-green-500/10">
@@ -159,16 +97,16 @@ export default function Pricing() {
         </div>
 
         {/* Add-on Toggle Button */}
-        <div className="flex justify-center mb-8">
-          <Button
-            variant="outline"
-            onClick={() => setShowAddon(!showAddon)}
-            className="bg-gray-800 border-gray-700 text-white hover:bg-gray-700"
-          >
-            {showAddon ? 'Hide' : 'Show'} Add-ons
-            {showAddon ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
-          </Button>
-        </div>
+          <div className="flex justify-center mb-8">
+            <Button
+              variant="outline"
+              onClick={() => setShowAddon(!showAddon)}
+              className="bg-gray-800 border-gray-700 text-white hover:bg-gray-700"
+            >
+              {showAddon ? 'Hide' : 'Show'} Add-ons
+              {showAddon ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
+            </Button>
+          </div>
 
         {/* Add-ons Section */}
         <AnimatePresence>
@@ -181,7 +119,7 @@ export default function Pricing() {
               className="overflow-hidden"
             >
               <div className="space-y-4">
-                {addons.map((addon) => (
+                {addons.map((addon: { id: string; name: string; description: string; price: string | number }) => (
                   <motion.div
                     key={addon.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -195,13 +133,17 @@ export default function Pricing() {
                       </div>
                       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                         <span className="text-2xl font-bold text-green-500">{typeof addon.price === 'number' ? addon.price.toFixed(3) : addon.price}</span>
-                        <Button 
-                          variant="outline"
-                          className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white border-green-600"
-                          onClick={() => handleAddonToggle(addon.id)}
-                        >
-                          PURCHASE
-                        </Button>
+                        {pathname ==="/listing" ? (
+
+                        null
+                        ) :                         <Button 
+                        variant="outline"
+                        className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white border-green-600"
+                        onClick={() => handleAddonToggle(addon.id)}
+                      >
+                        PURCHASE
+                      </Button>
+}
                       </div>
                     </div>
                   </motion.div>
@@ -213,5 +155,21 @@ export default function Pricing() {
       </div>
     </section>
   )
+}
+
+export interface PricingProps {
+  plans: Array<{
+    name: string;
+    price: string;
+    features: Array<{ name: string; included: boolean }>;
+    popular?: boolean;
+  }>;
+  addons: Array<{
+    id: string;
+    name: string;
+    description: string;
+    price: string | number;
+  }>;
+  buttonText: string;
 }
 

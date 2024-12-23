@@ -32,6 +32,52 @@ export default function ExtremeBiddingPag() {
 
   ]
 
+  const addonsplans = [ 
+    {
+      id :"0",
+      name:"Remove Prefix",
+      description : "Remove NFTPER prefix from your username",
+      price : "Ξ0.2"
+
+    
+    },
+    
+  ]
+
+  const extremeplans = [
+    
+    {
+      name: 'Standard Access',
+      price: "€0.50/mo",
+      features: [
+        { name: '8 token offers / sec (28800/hr)', included: true },
+        { name: 'Instant counter bidding', included: true },
+        { name: 'Includes bidding for free', included: true },
+      ],
+    },
+    {
+      name: 'Pro Access',
+      popular: true,
+      price: "€1.00/mo",
+      features: [
+        { name: '20 token offers / sec (72000/hr)', included: true },
+        { name: 'Instant counter bidding', included: true },
+        { name: 'Automatic cancelling', included: true },
+        { name: 'Includes bidding for free', included: true },
+      ],
+    },
+    {
+      name: 'Ultra Access',
+      price: "Coming Soon",
+      features: [
+        { name: '45 token offers / sec (162000/hr)', included: true },
+        { name: 'Instant counter bidding', included: true },
+        { name: 'Automatic cancelling', included: true },
+        { name: 'Includes bidding for free', included: true },
+      ],
+    },
+  ]
+
   return (
     <PageContainer title={''} description={''}>
       <section className="relative py-20 px-4 min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-background/80">
@@ -121,7 +167,7 @@ export default function ExtremeBiddingPag() {
       `}</style>
 
       <FeatureGrid features={extremeBiddingFeatures} />
-      <Pricing />
+      <Pricing plans={extremeplans} addons={addonsplans} buttonText={'PURCHASE'} />
       <FAQ title={''} faqs={biddingfaq}/>
     </PageContainer>
   )

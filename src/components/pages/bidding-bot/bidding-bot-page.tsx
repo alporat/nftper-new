@@ -19,6 +19,77 @@ export function BiddingBotPage() {
   useEffect(() => {
     pathname === "/bidding" ? setIshome(true) : setIshome(true)
   }, [pathname])
+
+  const addonsplans = [ 
+    {
+      id :"0",
+      name:"Remove Prefix",
+      description : "Remove NFTPER prefix from your username",
+      price : "Ξ0.05"
+
+    
+    },
+    {
+      id :"1",
+      name:"Bot Count Increase",
+      description : " Increases your bot count by one (for Standard and Pro subscription)",
+      price : "Ξ0.05"
+
+    
+    },
+    {
+      id :"2",
+      name:"Ultra Bot Count Increase",
+      description : "Increases your bot count by one (for Ultra subscription)",
+      price : "Coming Soon"
+
+    
+    }
+  ]
+  const biddingplans = [
+    
+    {
+      name: 'Standard Access',
+      price: "Ξ0.07",
+      features: [
+        { name: 'Up to 180 offers / minute', included: true },
+        { name: '60 token offers / min', included: true },
+        { name: '120 collection offers / min', included: true },
+        { name: '1 bot count', included: true },
+        { name: 'Add up to 5 wallets to bid from', included: true },
+        { name: 'Instant Counter Offer (coming soon)', included: false },
+        { name: 'Whitelist on future Lifetime NFT', included: true },
+      ],
+    },
+    {
+      name: 'Pro Access',
+      popular: true,
+      price: "Ξ0.10",
+      features: [
+        { name: 'Up to total of 540 offers / minute', included: true },
+        { name: '180 offers / min per wallet', included: true },
+        { name: '60 token offers / min', included: true },
+        { name: '120 collection offers / min', included: true },
+        { name: 'Bid with 3 wallets concurrently', included: true },
+        { name: 'Instant Counter Offer (coming soon)', included: false },
+        { name: 'Whitelist on future Lifetime NFT', included: true },
+      ],
+    },
+    {
+      name: 'Ultra Access',
+      price: "Coming Soon",
+      features: [
+        { name: 'Up to 960 offers / minute', included: true },
+        { name: '60 token offers / min', included: true },
+        { name: '900 collection offers / min', included: true },
+        { name: '1 ultra speed bot count', included: true },
+        { name: 'Add up to 10 wallets to bid from', included: true },
+        { name: 'Instant Counter Offer (coming soon)', included: false },
+        { name: 'Whitelist on future Lifetime NFT', included: true },
+      ],
+    },
+  ]
+  
   const biddingfaq = [
     {question:"What does NFTPER offer? ", answer:"We are a new service provider, and we offer autonomous bots that can send offers on NFTs for you. "},
     {question:"Who is the NFTPER team?", answer: (
@@ -126,7 +197,7 @@ export function BiddingBotPage() {
       `}</style>
 
       <FeatureGrid features={biddingBotFeatures} />
-      <Pricing />
+      <Pricing plans={biddingplans} addons={addonsplans} buttonText={'PURCHASE'} />
       <FAQ title={''} faqs={biddingfaq}/>
     </PageContainer>
   )
