@@ -3,5 +3,9 @@ module.exports = {
       ignoreDuringBuilds: true,
     },
   output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  basePath: '/nftper-new',
   };
   
