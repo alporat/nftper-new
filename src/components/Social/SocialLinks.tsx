@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { MessageSquare, Twitter, BookOpen, User } from 'lucide-react';
 
 const socialLinks = [
-  { icon: MessageSquare, label: 'Discord', href: '#' },
+  { icon: MessageSquare, label: 'Discord', href: 'https://discord.gg/hsa6VKbjzw' },
   { icon: Twitter, label: 'Twitter', href: '#' },
   { icon: BookOpen, label: 'Docs', href: '#' },
   { icon: User, label: 'Profile', href: '#' },
