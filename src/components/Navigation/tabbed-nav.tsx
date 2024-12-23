@@ -32,7 +32,7 @@ export default function TabbedNav() {
             className={cn(
               "px-3 py-1 rounded-md text-sm font-medium relative transition-all duration-200 ease-in-out",
               activeTab === 'bidding'
-                ? "bg-emerald-500 text-white scale-105"
+                ? "bg-green-500 text-white scale-105"
                 : "text-zinc-400 hover:text-white hover:bg-zinc-800"
             )} href={'/bidding'}          >
             Bidding
@@ -42,7 +42,7 @@ export default function TabbedNav() {
             className={cn(
               "px-3 py-1 rounded-md text-sm font-medium relative transition-all duration-200 ease-in-out",
               activeTab === 'listing'
-                ? "bg-emerald-500 text-white scale-105"
+                ? "bg-green-500 text-white scale-105"
                 : "text-zinc-400 hover:text-white "
             )}href={"/listing"}
           >
@@ -53,7 +53,7 @@ export default function TabbedNav() {
             className={cn(
               "px-3 py-1 rounded-md text-sm font-medium relative transition-all duration-200 ease-in-out",
               activeTab === 'extreme'
-                ? "bg-emerald-500 text-white scale-105"
+                ? "bg-green-500 text-white scale-105"
                 : "text-zinc-400 hover:text-white "
             )}href={"/extremebidding"}
           >
