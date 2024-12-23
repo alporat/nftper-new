@@ -5,6 +5,7 @@ import '@/styles/globals.css';
 export const metadata: Metadata = {
   title: 'NFTPER - Advanced NFT Trading Tools',
   description: 'Professional NFT trading tools with bidding bots and listing automation',
+  keywords: 'OpenSea, Bot, Offer Bot, OpenSea Bot, Bidding Bot, Bid Bot, OpenSea Offer Bot, OpenSea Bidding Bot',
 };
 
 export default function RootLayout({
