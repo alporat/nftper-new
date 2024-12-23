@@ -118,9 +118,9 @@ export function BiddingBotPage() {
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-left space-y-8">
-              <div className="inline-block px-4 py-2 bg-emerald-500/10 rounded-full relative ">
+              <div className="inline-block px-4 py-2 bg-green-500/10 rounded-full relative ">
 
-                <div className="flex items-center gap-2 text-emerald-500 ">
+                <div className="flex items-center gap-2 text-green-500 ">
                   <Bot className="w-4 h-4" />
 
                   <span className="text-sm font-medium">
@@ -133,7 +133,7 @@ export function BiddingBotPage() {
                 Maximize Your NFT Game with{' '}
                 
                 <span className="relative">
-                  <span className="bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
                     NFTPER
                   </span>
                 </span>
@@ -146,11 +146,11 @@ export function BiddingBotPage() {
               </p>
 
               <div className="flex flex-wrap gap-4 items-center">
-                <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white">
+                <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white">
                   Get Started
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-emerald-500/20 hover:bg-emerald-500/10">
+                <Button size="lg" variant="outline" className="border-green-500/20 hover:bg-green-500/10">
                   Watch Demo
                 </Button>
               </div>
@@ -160,7 +160,7 @@ export function BiddingBotPage() {
                   {[1, 2, 3, 4].map((i) => (
                     <div
                       key={i}
-                      className="w-8 h-8 rounded-full border-2 border-background bg-emerald-500/20"
+                      className="w-8 h-8 rounded-full border-2 border-background bg-green-500/20"
                     />
                   ))}
                 </div>
@@ -169,13 +169,13 @@ export function BiddingBotPage() {
             </div>
 
             <div className="relative lg:block">
-              <div className="relative w-full aspect-square rounded-2xl overflow-hidden border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-transparent backdrop-blur-sm">
+              <div className="relative w-full aspect-square rounded-2xl overflow-hidden border border-green-500/20 bg-gradient-to-br from-green-500/10 to-transparent backdrop-blur-sm">
                 <div className="absolute inset-0 bg-grid-white/5" />
                 <div className="relative z-10 ">
                   {/* Add your NFT preview or bot interface mockup here */}
                   <Image src={img} alt={''} />
 
-                  <div className="w-full h-full rounded-lg bg-background/40 backdrop-blur-md border border-emerald-500/20 t flex items-center justify-center" />
+                  <div className="w-full h-full rounded-lg bg-background/40 backdrop-blur-md border border-green-500/20 t flex items-center justify-center" />
                 </div>
               </div>
             </div>
