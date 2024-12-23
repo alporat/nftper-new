@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button'
 import Pricing from '@/components/ui/pricing'
 import Image from 'next/image'
 import { ArrowRight, Bot, Sparkles } from 'lucide-react'
-import img from "@/images/nft.png"
+import img from "@/images/mo.png"
 import { FAQ } from '@/components/ui/faq'
 export function BiddingBotPage() {
   const pathname = usePathname()
