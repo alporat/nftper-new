@@ -18,6 +18,9 @@ const config = {
     extend: {
       colors: {
         'dot-black': '#000000',
+        'main-green': '#00db5f',
+        'background-gray': '#181a1b',
+        'logo-white': '#e8e6e3',
       },
     },
   },
