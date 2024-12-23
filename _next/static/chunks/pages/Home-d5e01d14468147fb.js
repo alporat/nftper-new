@@ -1,0 +1,16 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[336],{1581:function(e,t,r){"use strict";r.d(t,{Z:function(){return o}});/**
+ * @license lucide-react v0.468.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */let o=(0,r(1373).Z)("Bot",[["path",{d:"M12 8V4H8",key:"hb8ula"}],["rect",{width:"16",height:"12",x:"4",y:"8",rx:"2",key:"enze0r"}],["path",{d:"M2 14h2",key:"vft8re"}],["path",{d:"M20 14h2",key:"4cs60a"}],["path",{d:"M15 13v2",key:"1xurst"}],["path",{d:"M9 13v2",key:"rq6x2g"}]])},5010:function(e,t,r){"use strict";r.d(t,{Z:function(){return o}});/**
+ * @license lucide-react v0.468.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */let o=(0,r(1373).Z)("ListChecks",[["path",{d:"m3 17 2 2 4-4",key:"1jhpwq"}],["path",{d:"m3 7 2 2 4-4",key:"1obspn"}],["path",{d:"M13 6h8",key:"15sg57"}],["path",{d:"M13 12h8",key:"h98zly"}],["path",{d:"M13 18h8",key:"oe0vm4"}]])},9461:function(e,t,r){"use strict";r.d(t,{Z:function(){return o}});/**
+ * @license lucide-react v0.468.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */let o=(0,r(1373).Z)("Zap",[["path",{d:"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z",key:"1xq2db"}]])},6834:function(e,t,r){(window.__NEXT_P=window.__NEXT_P||[]).push(["/Home",function(){return r(9953)}])},9953:function(e,t,r){"use strict";r.r(t),r.d(t,{default:function(){return c}});var o=r(5893);r(7294);var n=r(1163),i=r(6380),l=r(1581),s=r(5010),a=r(9461);function c(){let e=(0,n.useRouter)(),t=[{path:"/biddingbot",icon:l.Z,title:"Bidding Bot",description:"Automated NFT bidding with smart price detection",color:"from-blue-500/20 to-blue-600/20 hover:from-blue-500/30 hover:to-blue-600/30"},{path:"/listingbot",icon:s.Z,title:"Listing Bot",description:"List your NFTs across multiple marketplaces",color:"from-green-500/20 to-green-600/20 hover:from-green-500/30 hover:to-green-600/30"},{path:"/extremebidding",icon:a.Z,title:"Extreme Bidding",description:"Advanced features for professional traders",color:"from-purple-500/20 to-purple-600/20 hover:from-purple-500/30 hover:to-purple-600/30"}];return(0,o.jsxs)("div",{className:"flex flex-col items-center",children:[(0,o.jsx)("h1",{className:"text-4xl font-bold mb-8",children:"Choose Your Trading Bot"}),(0,o.jsx)("div",{className:"grid md:grid-cols-3 gap-8 w-full max-w-5xl",children:t.map(t=>{let{path:r,icon:n,title:l,description:s,color:a}=t;return(0,o.jsxs)(i.E.button,{onClick:()=>e.push(r),className:"p-8 rounded-xl bg-gradient-to-br ".concat(a," backdrop-blur-sm \n              border border-white/10 text-left transition-all duration-300"),whileHover:{scale:1.02},whileTap:{scale:.98},children:[(0,o.jsx)(n,{className:"w-12 h-12 mb-4"}),(0,o.jsx)("h2",{className:"text-2xl font-bold mb-2",children:l}),(0,o.jsx)("p",{className:"text-gray-400",children:s})]},r)})})]})}},1163:function(e,t,r){e.exports=r(4546)}},function(e){e.O(0,[242,888,774,179],function(){return e(e.s=6834)}),_N_E=e.O()}]);
