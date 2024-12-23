@@ -41,7 +41,20 @@ export function HomePage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-4xl font-bold mb-8">Choose Your Trading Bot</h1>
+      <div className="inline-flex items-center gap-2">
+        <Image 
+          src="/img/logo.png"
+          alt="test"
+          width={40}
+          height={40}
+          className="object-contain"
+        />
+        <div className="text-2xl font-bold">
+          <span className="text-green-500">NFT</span>
+          <span className="text-white">PER</span>
+        </div>
+      </div>
+      <h1 className="text-4xl font-bold mb-8">Automated NFT flipping. Click on the product you want to check out</h1>
       <div className="grid md:grid-cols-3 gap-8 w-full max-w-5xl">
         {features.map((feature) => (
           <FeatureButton
