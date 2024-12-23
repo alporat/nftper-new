@@ -200,7 +200,7 @@ export default function Pricing() {
                           className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white border-green-600"
                           onClick={() => handleAddonToggle(addon.id)}
                         >
-                          {selectedAddons.includes(addon.id) ? 'Remove' : 'PURCHASE'}
+                          PURCHASE
                         </Button>
                       </div>
                     </div>
