@@ -2,6 +2,8 @@
 
 import { usePathname, useRouter,  } from 'next/navigation';
 import { Bot, ListChecks, Zap } from 'lucide-react';
+import Image from 'next/image'
+import img from "@/images/logo.png"
 import { FeatureButton } from '@/components/ui/feature-button';
 import { useStore } from '@/app/hooks/path';
 import {useEffect} from "react"
@@ -43,7 +45,7 @@ export function HomePage() {
     <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="inline-flex items-center gap-2">
         <Image 
-          src="/img/logo.png"
+          src={img}
           alt="test"
           width={40}
           height={40}
